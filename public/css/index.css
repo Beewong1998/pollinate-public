@@ -1,0 +1,150 @@
+*{ 
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    transition-duration: 300ms;
+}
+
+:root {
+    --color-primary: #121212;
+    --color-secondary: #f2f2f2;
+    --color-accent: #f6e000;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    font-size: clamp(0.5rem, 2vw + 1rem, 2.6rem);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 72vw;
+    
+}
+
+form h1 {
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: var(--color-accent);
+    text-align: center;
+    user-select: none;
+    margin-top: min(10vh, 50px);
+}
+
+form h2 {
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: var(--color-secondary);
+    text-align: center;
+    user-select: none;
+    margin: 10px 0 30px 0;
+}
+
+.del {
+    font-size: clamp(0.5rem, 1vw + 0.7rem, 8.6rem) !important;
+    opacity: 0.7;
+    
+}
+
+.del:hover {
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+form label input {
+    font-size: clamp(0.1em, 5vw, 0.6em);
+    
+}
+
+form > input,
+form label,
+form label input {
+    width: 100%;
+    background: transparent;
+    outline: none;
+    color: var(--color-secondary);
+    padding: 6px 4px; 
+    border: none;
+} 
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form div div {
+    color: var(--color-secondary);
+    cursor: pointer;
+    width: fit-content;
+}
+
+form div div:hover {
+    transform: scale(1.25);
+}
+
+form div input {
+    width: 100%;
+    background: var(--color-accent);
+    color: black;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 18px auto;
+}
+
+form div input:hover {
+    opacity: 0.7;
+}
+
+#question {
+    border: 1px solid transparent;
+    border-bottom: 1px solid var(--color-accent);
+    margin: 4px 0 12px 0;
+    font-size: clamp(0.1em, 5vw, 1.1em);
+    padding: 14px 12px;
+}
+
+/* #question:focus {
+    border: 1px solid var(--color-accent);
+} */
+
+#question:hover,
+.options:hover {
+    opacity: 0.7;
+}
+
+.options {
+    position: relative;
+    padding-left: 20px;
+    flex: 1;
+    color: var(--color-secondary);
+    border-bottom: 1px solid transparent;
+    padding: 6px 3px;
+}
+
+.options:hover {
+    border-bottom: 1px solid var(--color-accent);
+}
+
+form label {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
